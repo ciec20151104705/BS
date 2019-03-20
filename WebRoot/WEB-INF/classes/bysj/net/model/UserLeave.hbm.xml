@@ -1,0 +1,22 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC 
+	"-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+	"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+	<class name="bysj.net.model.UserLeave" table="t_UserLeave">
+		<id name="id">
+			<generator class="native" />
+		</id>
+		<many-to-one name="user" class="bysj.net.model.User" outer-join="false" lazy="false">
+		</many-to-one>
+		<many-to-one name="user1" class="bysj.net.model.User" outer-join="false" lazy="false">
+		</many-to-one>
+		<property name="s_0" column="u_name" />
+		<property name="s_1" column="u_time" />
+		<property name="s_2" column="u_day" />
+		<property name="s_3" column="u_type" />
+		<property name="s_4" column="u_yuany" />
+		<property name="s_5" column="u_status" />
+		<property name="s_6" column="u_bz" />
+	</class>
+</hibernate-mapping>
