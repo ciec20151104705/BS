@@ -1,0 +1,19 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC 
+	"-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+	"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+	<class name="bysj.net.model.UserFile" table="t_UserFile">
+		<id name="id">
+			<generator class="native" />
+		</id>
+		<many-to-one name="userLeave" class="bysj.net.model.UserLeave" outer-join="false" lazy="false">
+		</many-to-one>
+		<property name="s_0" column="tp" />
+		<property name="s_1" column="wjm" />
+		<property name="s_2" column="scsj" />
+		<property name="s_3" column="u_name" />
+		<property name="s_4" column="u_time" />
+		<property name="s_5" column="u_bz" />
+	</class>
+</hibernate-mapping>

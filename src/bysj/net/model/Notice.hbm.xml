@@ -1,0 +1,17 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC 
+	"-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+	"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+	<class name="bysj.net.model.Notice" table="t_Notice">
+		<id name="id">
+			<generator class="native" />
+		</id>
+		<many-to-one name="user" class="bysj.net.model.User" outer-join="false" lazy="false">
+		</many-to-one>
+		<property name="s_0" column="n_name" />
+		<property name="s_1" column="n_time" />
+		<property name="s_2" column="n_neir" />
+		<property name="s_3" column="n_bz" />
+	</class>
+</hibernate-mapping>
